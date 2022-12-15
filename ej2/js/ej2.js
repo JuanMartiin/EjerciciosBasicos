@@ -2,24 +2,40 @@ class Ej2{
     
     init(){
         
-        /*for(var i=0; i<b.length; i++){
-            b[i].appendChild(div);
+        let a = document.querySelectorAll(".parrafoEditable");
+
+        for (let objeto of a) {
+            let btn = document.createElement("button");
+            btn.innerHTML = "EDITAR";
+            objeto.after(btn);
+            btn.addEventListener('click', () =>{
+                btn.remove(objeto);
+                let div = document.createElement("div");
+                objeto.after(div);
+                let textArea = document.createElement("textarea");
+                div.appendChild(textArea);
+                let content = objeto.innerHTML;
+                textArea.value = content;
+                let accept = document.createElement("button");
+                accept.innerHTML = "ACEPTAR";
+                let cancel = document.createElement("button");
+                cancel.innerHTML = "CANCELAR";
+                textArea.after(accept);
+                textArea.after(cancel);
+                
+                accept.addEventListener('click', () =>{
+                    objeto.innerHTML = textArea.value;
+                    div.remove(textArea);
+                    objeto.after(btn);
+                })
+
+                cancel.addEventListener('click', () =>{
+                    div.remove(textArea);
+                    objeto.after(btn);
+                })
+            });
         }
-        */
-
-        let btn = document.getElementById("edit1");
-        let btn2 = document.getElementById("edit2");
-        btn.addEventListener('click', () => {
-            let b = document.getElementById("parrafo1");
-            let div = document.createElement("textarea");
-            b.appendChild(div);
-        });
-
-        btn2.addEventListener('click', () => {
-            let b = document.getElementById("parrafo2");
-            let div = document.createElement("textarea");
-            b.appendChild(div);
-        });
+        
     }
 }
 
