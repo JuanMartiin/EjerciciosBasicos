@@ -1,0 +1,26 @@
+<!--Crea una página web dónde el usuario podrá editar los párrafos que quiera, todos los párrafos
+tendrán asignada una clase. El usuario podrá pulsar un botón asignado a cada párrafo para poder
+editarlo, pulsando ese botón el párrafo se convertirá en un textarea con el contenido del párrafo,
+además estarán disponibles dos botones (aceptar y cancelar) para confirmar los cambios.
+La web tendrá inicialmente un contenido parecido a:
+<p class=”parrafoEditable”>Esto es uno de los párrafos editables</p>
+<p class=”parrafoEditable”>Esto es otro</p>
+Todas las operaciones y manejadores de eventos deben de estar desarrollados sobre javascript.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI</title>
+</head>
+<body>
+    <p class="parrafoEditable" id="parrafo1">Esto es uno de los párrafos editables</p>
+    <button id="edit1" type="submit">EDITAR</button>
+    <p class="parrafoEditable" id="parrafo2">Esto es otro</p>
+    <button id="edit2" type="submit">EDITAR</button>
+
+    <script type="module" src="js/init.js"></script>
+</body>
+</html>
