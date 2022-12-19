@@ -1,0 +1,14 @@
+.numero{
+    width: 10px;
+    cursor:pointer;
+}
+
+.operacion{
+    width: 10px;
+    cursor: pointer;
+}
+
+.igual{
+    width: 10px;
+    cursor: pointer;
+}
